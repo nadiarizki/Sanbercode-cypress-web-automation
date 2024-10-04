@@ -1,0 +1,7 @@
+export const input_firstName="input[name='firstName']"
+export const input_lastName="input[name='lastName']"
+export const input_postCode="input[name='postalCode']"
+export const btn_continue="input[name='continue']"
+export const btn_finish="button[name='finish']"
+export const txt_title="span[class='title']"
+export const txt_Header="h2[class='complete-header']"

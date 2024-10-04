@@ -1,0 +1,1 @@
+export const btn_checkout="button[name='checkout']"
