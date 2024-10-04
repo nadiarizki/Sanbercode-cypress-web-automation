@@ -5,7 +5,7 @@ before(() => {
   cy.config("defaultCommandTimeout", 20000);
 });
 
-describe('Sauce Demo', () => {
+describe('Sort Item', () => {
   beforeEach(() => {
     cy.visit(Cypress.env("baseUrl"));
     cy.get(page.input_username).type('standard_user');
@@ -15,7 +15,7 @@ describe('Sauce Demo', () => {
   });
 
 
-  it('Sort Item Name - Desc', () => {
+  it('Sort Item by Name - Desc', () => {
     cy.get(homepage.dropdown_sort).select('Name (Z to A)')
     cy.get(homepage.txt_itemName).then($elements => {
       // Convert to array and get text
@@ -27,7 +27,7 @@ describe('Sauce Demo', () => {
     });
   });
 
-  it('Sort Item Name - Asc', () => {
+  it('Sort Item by Name - Asc', () => {
     cy.get(homepage.dropdown_sort).select('Name (A to Z)')
     cy.get(homepage.txt_itemName).then($elements => {
       // Convert to array and get text
@@ -39,7 +39,7 @@ describe('Sauce Demo', () => {
     });
   });
   
-  it('Sort Item Price - Low to High', () => {
+  it('Sort Item by Price - Low to High', () => {
     cy.get(homepage.dropdown_sort).select('Price (low to high)')
     cy.get(homepage.txt_itemPrice).then($elements => {
         // Extract text, remove the dollar sign, and convert to numbers
@@ -51,7 +51,7 @@ describe('Sauce Demo', () => {
       });
     });
 
-  it('Sort Item Price - High to Low', () => {
+  it('Sort Item by Price - High to Low', () => {
     cy.get(homepage.dropdown_sort).select('Price (high to low)')
     cy.get(homepage.txt_itemPrice).then($elements => {
         // Extract text, remove the dollar sign, and convert to numbers
